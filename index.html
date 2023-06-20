@@ -236,10 +236,26 @@
             <canvas id="barchart"></canvas>
           </div>
 
-          <div class="images">
+          <div class="projects-images">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="projects-images">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="projects-images">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <!-- <div class="images">
             <small>View images</small>
-            <span class="fa-sharp fa-solid fa-circle-arrow-left left"></span>
-            <span class="fa-sharp fa-solid fa-circle-arrow-right right"></span>
 
             <div class="card-wrapper">
               <div class="card-item">
@@ -321,7 +337,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </main>
       <!-- main section ends here  -->
@@ -410,10 +426,10 @@
       const cardWrapper = document.querySelector(".card-wrapper");
       const cardWrapperChildren = Array.from(cardWrapper.children);
       const widthToScroll = cardWrapper.children[0].offsetWidth;
-      const arrowPrev = document.querySelector(".left");
-      const arrowNext = document.querySelector(".right");
+      // const arrowPrev = document.querySelector(".left");
+      // const arrowNext = document.querySelector(".right");
       const cardBounding = cardWrapper.getBoundingClientRect();
-      const column = Math.floor(cardWrapper.offsetWidth / (widthToScroll + 24));
+      const column = Math.floor(cardWrapper.offsetWidth / (widthToScroll + 30));
       let currScroll = 0;
       let initPos = 0;
       let clicked = false;
@@ -437,14 +453,6 @@
       cardWrapper.classList.add("no-smooth");
       cardWrapper.scrollLeft = cardWrapper.offsetWidth;
       cardWrapper.classList.remove("no-smooth");
-
-      arrowPrev.onclick = function () {
-        cardWrapper.scrollLeft -= widthToScroll;
-      };
-
-      arrowNext.onclick = function () {
-        cardWrapper.scrollLeft += widthToScroll;
-      };
 
       cardWrapper.onmousedown = function (e) {
         cardWrapper.classList.add("grab");
@@ -474,7 +482,7 @@
         if (cardWrapper.scrollLeft === 0) {
           cardWrapper.classList.add("no-smooth");
           cardWrapper.scrollLeft =
-            cardWrapper.scrollWidth - 2 * cardWrapper.offsetWidth;
+            cardWrapper.scrollWidth - 4 * cardWrapper.offsetWidth;
           cardWrapper.classList.remove("no-smooth");
         } else if (
           cardWrapper.scrollLeft ===
@@ -492,7 +500,7 @@
         autoScroll = setTimeout(() => {
           cardWrapper.classList.remove("no-smooth");
           cardWrapper.scrollLeft += widthToScroll;
-        }, 1000);
+        }, 2000);
       };
     </script>
   </body>
