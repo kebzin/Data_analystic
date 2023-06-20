@@ -49,21 +49,21 @@ small {
 /* main */
 main {
   margin-top: 1.4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 main .insights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
   grid-column: auto;
 }
 
 main .insights > div {
   background-color: #fff;
-  padding: 1rem;
+  padding: 10px;
   border-radius: 15px;
-  margin-top: 1rem;
+  margin-top: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 main .insights > div:hover {
