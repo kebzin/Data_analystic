@@ -56,6 +56,7 @@ main .insights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  grid-column: auto;
 }
 
 main .insights > div {
@@ -115,12 +116,12 @@ main .insights .progress .number {
 }
 
 /* region base  */
-main .genser {
+/* main .genser {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
-}
+} */
 main .genser .table {
   grid-column: span 2;
   width: 100%;
@@ -129,12 +130,10 @@ main .genser h2 {
   margin-bottom: 0.8rem;
 }
 main .genser table {
-  background-color: var(---white);
   width: 100%;
   border-radius: 15px;
   padding: 1rem;
   text-align: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 main .genser table:hover {
@@ -148,12 +147,12 @@ main .genser table tbody td {
   text-align: left;
 }
 
-main .genser .item-container {
+main .item-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-main .genser .item-container .item {
+main .item-container .item {
   background: #fff;
   display: flex;
   align-items: center;
@@ -161,13 +160,13 @@ main .genser .item-container .item {
   padding: 0.8rem;
   border-radius: 10px;
 }
-main .genser .item-container .item > div {
+main .item-container .item > div {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 50px;
 }
-main .genser span {
+main .item-container span {
   padding: 0.7rem;
   background-color: var(--color-primary);
   border-radius: 50%;
@@ -176,15 +175,9 @@ main .genser span {
 }
 
 /* CHAT AND IMAGE SECTION */
-.chart-image-container {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-}
-.chart-image-container > div {
-  background-color: #fff;
 
+.caresole-slider > div {
+  background-color: #fff;
   border-radius: 10px;
   margin-bottom: 3rem;
   padding: 1rem;
